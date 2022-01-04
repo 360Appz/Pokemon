@@ -1,24 +1,19 @@
-# pokemon
+# Pokemon Project
 
-## Project setup
-```
-npm install
-```
+This project has been adapted from a tutorial found on Youtube and one of my first warm up task for my internship. The app displays the various pokemons from the Pokemon TV series. 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+# Technologies
+* Vue.js
+* PokeApi (REST-ful API)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+# Compatibility
+* Vue.js 3 (May not be compatible with version 2)
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Technical Information
+* npm run serve - Compilation & Hot Reload
+* npm run lint - Lints and fixes files
+
+# Reference
+
+
