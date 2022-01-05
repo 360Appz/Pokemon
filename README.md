@@ -16,10 +16,6 @@ This project has been adapted from a tutorial found on Youtube and one of my fir
 
 # Reference
 * https://www.youtube.com/watch?v=8pFkiNvxnD0&ab_channel=Webnoob
-<<<<<<< HEAD
-=======
 * https://github.com/webnoobcodes/vuejs-pokemons
->>>>>>> b74f7f79ba5b86f6db01bd9df67200ee2f23885b
 
-* https://github.com/webnoobcodes/vuejs-pokemons
 
