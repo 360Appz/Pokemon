@@ -15,5 +15,7 @@ This project has been adapted from a tutorial found on Youtube and one of my fir
 * npm run lint - Lints and fixes files
 
 # Reference
+* https://www.youtube.com/watch?v=8pFkiNvxnD0&ab_channel=Webnoob
 
+* https://github.com/webnoobcodes/vuejs-pokemons
 

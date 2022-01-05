@@ -1,29 +1,7 @@
-<!--<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Testing first vue app"/>
-</template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>-->
+<!--Template provides a HTML-based syntax
+to bind the rendered DOM to an underlying
+Vue instance data -->
 <template>
  <div id="app">
     <Pokemon />
@@ -41,6 +19,9 @@ export default {
 }
 </script>
 
+<!-- SCSS is more advance than regular CSS, 
+requires less code, allows nested code which improves 
+readability when scaling a project-->
 <style lang="scss">
  @import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
 #app {
@@ -54,20 +35,4 @@ export default {
 
 
 
-<!--
-<script>
-import Pokemon from './components/Pokemon.vue'
-export default {
-  components: {
-    Pokemon
-  }
-}
-</script>
 
-<style lang="scss">
-  @import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
-  body {
-    margin: 0;
-    padding: 0;
-  }
-</style>-->
