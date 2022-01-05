@@ -114,10 +114,10 @@ export default {
       background-color: #efefef;
       text-align: center;
       text-transform: capitalize;
-      border-radius: 5px;
+      border-radius: 30px 30px 30px 30px;
       cursor: pointer;
-      box-shadow: 0 15px 30px rgba(0,0,0,.2),
-                  0 10px 10px rgba(0,0,0,.2);
+      box-shadow: 0 15px 30px rgba(0,0,0,.3),
+                  0 10px 10px rgba(0,0,0,.3);
       h3 {
         margin: 0;
       }

@@ -1,10 +1,13 @@
 # Pokemon Project
 
-This project has been adapted from a tutorial found on Youtube and one of my first warm up task for my internship. The app displays the various pokemons from the Pokemon TV series. 
+This project has been adapted from a tutorial found on Youtube and one of my first warm up task for my internship. The app displays the various pokemons from the Pokemon TV series.
+
+# Demo
+* 
 
 # Technologies
 * Vue.js
-* PokeApi (REST-ful API)
+* PokeApi (REST/Rest-ful API)
 
 # Compatibility
 * Vue.js 3 (May not be compatible with version 2)

@@ -14,17 +14,52 @@ the HTML element will change when Vue object changes
                    <div class="left">Base Experience</div>
                    <div class="right">{{pokemon.base_experience}} XP</div>
                    </div> 
+    <!-- Modifying in progress-->
+                   <div class="property">
+                       <div  class="left">Item </div>
+                       <div class="right" 
+                      v-for="(value, index) in pokemon.held_items"
+                      :key="'value'+index">
+                      {{ value.item.name }}
+
+                      <div v-if="pokemon.held_items == 0" >
+                          None
+                       </div>
+                      
+                       </div>   
+                   </div>
 
                    <div class="property">
-                       <div class="left">Height</div>
-                       <div class="right"
-                       >{{pokemon.height / 10}} m</div>
+                       <div  class="left"> Base Stat </div>
+                       <div class="right" 
+                      v-for="(value, index) in pokemon.stats"
+                      :key="'value'+index">
+                      {{ value.base_stat}}
+
+                      <div v-if="pokemon.stats == null">
+                          No stat availalbe
+                       </div>
+                       </div>   
                    </div>
+
                     <div class="property">
-                       <div class="left"> Weight </div>
-                       <div class="right">
-                         {{pokemon.weight / 10}} kg</div>
+                       <div  class="left"> Location </div>
+                       <div class="right" 
+                      v-for="(value, index) in pokemon.held_items"
+                      :key="'value'+index">
+                      {{ value.location_area_encounters}}
+
+                      <div v-if="pokemon.location_area_encounters == null">
+                          No location availalbe
+                       </div>
+                       </div>   
                    </div>
+      <!-- End of modification-->
+
+
+
+
+
                 <h3> Pokemon Types </h3>
                 <div class="types">
                 <div class="type" 
@@ -94,7 +129,7 @@ export default {
 
 <style lang="scss" scoped>
   .detail {
-    animation: ease-in;
+    animation: ease-in 60s;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -166,15 +201,15 @@ export default {
             margin: 0 10px 10px 0;
             padding: 5px 10px;
             border-radius: 20px;
-            color: #fff;
+            color: rgb(0, 0, 0);
             font-size: 1rem;
             letter-spacing: 2px;
             text-transform: capitalize;
             word-wrap: none;
             word-break: keep-all;
           }
-          .type { background-color: #0A2E50; }
-          .ability { background-color: #C73015; }
+          .type { background-color: #8CFA4B; }
+          .ability { background-color: #ED8E53; }
         }
       }
       .close {
