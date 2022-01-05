@@ -29,6 +29,10 @@ export default {
     },
 
     methods:{
+        /*API functions which call the data required.
+        Uses the Fetch API by Vue. 
+        Code 200 = Success in fetch. Data returned in JSON format
+        */
         fetchData() {
             let req = new Request(this.currentUrl);
             fetch(req).then ((resp) =>
@@ -36,21 +40,31 @@ export default {
                 if(resp.status == 200)
                 return resp.json();
             })
+            /*The next data is stored in nextUrl variable
+            - The results of the data for each pokemon is stored into the id variable. 
+            - The url is split using the "/"" symbol. 
+            - Non null values will be removed using pop and returned*/
             .then((data) => {
                 this.nextUrl = data.next;
                 data.results.forEach(pokemon => {
                     pokemon.id = pokemon.url.split('/')
                     .filter(function(part){return !!part}).pop();
                     this.pokemons.push(pokemon);   
-                });
+                });``
 
             })
+            //Exception handling if error, shows error in console log
             .catch((error) =>
             {
                 console.log(error);
             })
         },
 
+        /*Intersection observer API used for unlimited scrolling 
+        - For every Pokemon wnrey, the scrolling will continue. 
+        - Intersection ratio shows how much of the entry is visible 
+          within the root intersection rectangle. 
+        - Non null values will be removed using pop and returned*/
         scrollTrigger()
         {
             const observer = new IntersectionObserver((entries) => {
@@ -61,7 +75,8 @@ export default {
                     }
                 });
             });
-
+            /*$ shows that a property is defined elsewhere 
+              and not within the current component.*/
             observer.observe(this.$refs.infinitescrolltrigger);
         },
         next()

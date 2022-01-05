@@ -1,3 +1,7 @@
+<!--{{}} - Acts as data binding placeholders, 
+the HTML element will change when Vue object changes
+-->
+
 <template>
     <div class="detail">
         <div class="detail-view" v-if="show">
@@ -39,7 +43,7 @@
               </div>
             </div>
           </div>
-          <h2 v-else>The pokemon was not found </h2>
+          <h2 v-else>Invalid Pokemon. Check spelling </h2>
           <button class="close" @click="closeDetail">close</button>
         </div>
            <i v-else class="fas fa-spinner fa-spin"></i>
@@ -64,6 +68,7 @@ export default {
             let req = new Request(this.pokemonUrl);
             fetch(req)
             .then((resp) => {
+              //Shows that request has succeeded
                 if(resp.status == 200)
                 return resp.json();
             })
@@ -89,6 +94,7 @@ export default {
 
 <style lang="scss" scoped>
   .detail {
+    animation: ease-in;
     display: flex;
     justify-content: center;
     align-items: flex-start;

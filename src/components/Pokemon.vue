@@ -1,6 +1,11 @@
+<!--Directives: -v prefix, Javascript based
+and apply effect to the DOM when the expression
+changes-->
+
+
 <template>
     <div class="container">
-        <h1>Pokemon's</h1>
+        <img alt= "Pokemon Logo" src="@/assets/Pokemon.png">
         <PokemonSearch :apiUrl="apiUrl"
         @setPokemonUrl="setPokemonUrl" />
 
@@ -35,6 +40,7 @@ export default {
     },
     components:
     {
+        //Acts as reusable Vue instances
         PokemonSearch,
         PokemonList,
         PokemonDetail,
@@ -67,7 +73,7 @@ export default {
     padding: 10px;
     width: calc(100% - 20px);
     min-height: calc(100vh - 20px);
-    background: radial-gradient(#156F99, #0A2E50);
+    background: radial-gradient(#FFFF00, #D1D100);
 
     font-family: 'Acme', arial;
     font-size: 1rem;

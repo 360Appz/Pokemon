@@ -1,3 +1,6 @@
+<!--Event handling:
+submit.prevemt will prevent reload when submit clicked-->
+
 <template>
     <div class="searchbar">
         <form @submit.prevent="setPokemonUrl">
@@ -38,7 +41,8 @@ export default {
     position: relative;
     width: 100%;
     max-width: 510px;
-    padding-bottom: 20px;
+    padding: 30px 0px 20px 0px;
+   
     input {
       border: none;
       outline: none;
@@ -51,6 +55,7 @@ export default {
     }
     i {
       position: absolute;
+      padding-top: 30px;
       top: 10px;
       right: 10px;
       font-size: 1.25rem;
