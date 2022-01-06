@@ -21,12 +21,11 @@ the HTML element will change when Vue object changes
                       v-for="(value, index) in pokemon.held_items"
                       :key="'value'+index">
                       {{ value.item.name }}
-
-                      <div v-if="pokemon.held_items == 0" >
+                       </div>
+                          
+                        <div v-if="pokemon.held_items == 0" class="right" >
                           None
                        </div>
-                      
-                       </div>   
                    </div>
 
                    <div class="property">
