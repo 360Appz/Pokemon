@@ -3,6 +3,7 @@ the HTML element will change when Vue object changes
 -->
 
 <template>
+
     <div class="detail">
         <div class="detail-view" v-if="show">
             <div v-if="pokemon" class="image">
@@ -14,7 +15,8 @@ the HTML element will change when Vue object changes
                    <div class="left">Base Experience</div>
                    <div class="right">{{pokemon.base_experience}} XP</div>
                    </div> 
-    <!-- Modifying in progress-->
+
+
                    <div class="property">
                        <div  class="left">Item </div>
                        <div class="right" 
@@ -22,7 +24,7 @@ the HTML element will change when Vue object changes
                       :key="'value'+index">
                       {{ value.item.name }}
                        </div>
-                          
+
                         <div v-if="pokemon.held_items == 0" class="right" >
                           None
                        </div>
@@ -34,30 +36,30 @@ the HTML element will change when Vue object changes
                       v-for="(value, index) in pokemon.stats"
                       :key="'value'+index">
                       {{ value.base_stat}}
+                       </div>   
 
-                      <div v-if="pokemon.stats == null">
+                         <div v-if="pokemon.stats == null">
                           No stat availalbe
                        </div>
-                       </div>   
+
                    </div>
 
                     <div class="property">
-                       <div  class="left"> Location </div>
+                       <div  class="left"> Type </div>
                        <div class="right" 
-                      v-for="(value, index) in pokemon.held_items"
+                      v-for="(value, index) in pokemon.types"
                       :key="'value'+index">
-                      {{ value.location_area_encounters}}
+                      {{ value.type.name}}
+                       </div> 
 
-                      <div v-if="pokemon.location_area_encounters == null">
-                          No location availalbe
+                      <div v-if="pokemon.types == null " class="right">
+                          Not available
                        </div>
-                       </div>   
+
                    </div>
-      <!-- End of modification-->
 
-
-
-
+                       
+     
 
                 <h3> Pokemon Types </h3>
                 <div class="types">
@@ -82,10 +84,13 @@ the HTML element will change when Vue object changes
         </div>
            <i v-else class="fas fa-spinner fa-spin"></i>
         </div>
+      
 </template>
 
 <script>
+
 export default {
+
     props: [
         'pokemonUrl',
         'imageUrl'
