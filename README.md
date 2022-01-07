@@ -5,6 +5,8 @@ This project has been adapted from a tutorial found on Youtube and one of my fir
 # Demo
 * https://www.youtube.com/watch?v=rzg3J248o-c&list=PLhusV3ueKvupwJ2zIfKXp1mAo-nMAFKhH&index=6&ab_channel=AMPASGAMING
 
+* https://360appz.github.io/Deployment/ (Try the app)
+
 # Technologies
 * Vue.js
 * PokeApi (REST/Rest-ful API)
